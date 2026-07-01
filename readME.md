@@ -22,27 +22,27 @@ This is just a project, but I hope it matures!
 
 Let me break it down for you:
 
-* Searching for a problem: run the script with the code(--search) parameter. If you wanted to, say, look for the Binary Search Algorithm, go: code(python3 XcodeOffline.py --search query n diff), where code(n) is the number of results you'd prefer (default is 25),and diff being difficulty, if you're looking for a certain difficulty. Options include code(easy), code(medium), code(hard), and code(extreme). The result would be:
+* Searching for a problem: run the script with the `--search` parameter. If you wanted to, say, look for the Binary Search Algorithm, go: `python3 XcodeOffline.py --search query n diff`, where `n` is the number of results you'd prefer (default is 25),and `diff` being difficulty, if you're looking for a certain difficulty. Options include `easy`, `medium`, `hard`, and `extreme`. The result would be:
 
 # An Important lil note here
-instead of writing code(python3 XcodeOffline.py) in your terminal, download the executable for your OS and replace that long line with code(XcodeOffline). Convenient, Right?
+instead of writing `python3 XcodeOffline.py` in your terminal, download the executable for your OS and replace that long line with `XcodeOffline`. Convenient, Right?
 
-  code(ID. problem name)
+  `ID. problem name`
 
-every problem has a unique ID, which is used to identify which problem you're solving when you run/submit the tests.
+This is the block that represents a found solution. Every problem has a unique ID, which is used to identify which problem you're solving when you run/submit the tests.
 
-* Running a test: run code(script --run ID), where --run is the name of the command (in this case, running), and ID is the identifier of the problem. This assumes that the file where you wrote your function is named script.py and the function's  name is code(xcodescript).
+* Running a test: run `script --run ID`, where --run is the name of the command (in this case, running), and ID is the identifier of the problem. This assumes that the file where you wrote your function is named script.py and the function's  name is `xcodescript`.
 
 > [!TIP]
 > This script only supports Python functions sadly. Maybe I'll add support for JS/TS, potentially other languages... Maybe.
 
-* Submitting a solution: same thing as running, only code(--submit) instead of code(--run).
+* Submitting a solution: same thing as running, `--submit` instead of `--run`.
 
 
 ## How to Compile?
 
 Use pyinstaller, like this:
 
-code(pyinstaller script_path -F --onefile)
+`pyinstaller script_path -F --onefile`
 
-You can also use code(-n NAME) if you like convenience.
+You can also use `-n NAME` if you like convenience.
