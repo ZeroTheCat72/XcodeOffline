@@ -26,9 +26,9 @@ class Problem:
 		for i in self.rtests:
 			if [func_ref(*i[0])] == i[1]:
 				passed += 1
-				print(f"Test case Number {passed} passed! Input: {i[0]}, Output: {i[1]}\n")
+				print(f"Test case Number {passed} passed! Input: {i[0]}, Output: {i[1]}")
 			else:
-				print(f"------\n!TEST CASE FAILED!\nPassed {passed} tests, Test case number {passed + 1} Failed!\nInput: {i[0]}, Expected Output: {i[1]}\nActual Output: {func_ref(*i[0])}")
+				print(f"!TEST CASE FAILED!\nPassed {passed} tests, Test case number {passed + 1} Failed!\nInput: {i[0]}, Expected Output: {i[1]}\nActual Output: {func_ref(*i[0])}")
 				return
 		print(f"Passed All {passed} Tests! You May be ready to submit!")
 
@@ -40,9 +40,9 @@ class Problem:
 		for i in self.stests:
 			if [func_ref(*i[0])] == i[1]:
 				passed += 1
-				print(f"Test case Number {passed} passed! Input: {i[0]}, Output: {i[1]}\n")
+				print(f"Test case Number {passed} passed! Input: {i[0]}, Output: {i[1]}")
 			else:
-				print(f"------\n!TEST CASE FAILED!\nPassed {passed} tests, Test case number {passed + 1} Failed!\nInput: {i[0]}, Expected Output: {i[1]}\nActual Output: {func_ref(*i[0])}")
+				print(f"!TEST CASE FAILED!\nPassed {passed} tests, Test case number {passed + 1} Failed!\nInput: {i[0]}, Expected Output: {i[1]}\nActual Output: {func_ref(*i[0])}")
 				return
 		print(f"Passed All {passed} Tests! You solved this Problem!!")
 
@@ -61,7 +61,6 @@ list_of_problems = [
 
 ]
 
-list_of_problems = sorted(list_of_problems, key=lambda x: x.id)
 
 difficulties = ["Easy", "Medium", "Hard", "Extreme"]
 
@@ -102,21 +101,30 @@ def fetch_problem(id: str, LOP):
 			low = median + 1
 		else: high = median - 1
 	sys.exit(1)
-		
+
 
 
 # Main Work
+
+try:
+	from extra_problems import new_problems
+	for problem in new_problems:
+		list_of_problems.append(problem)
+except:
+	pass
+
+
+list_of_problems = sorted(list_of_problems, key=lambda x: x.id)
+
 
 if sys.argv[1] == '--search':
 	print(get_available_problems(int(sys.argv[3]) if len(sys.argv) >= 4 else 25, sys.argv[4] if len(sys.argv) >= 5 else None, sys.argv[2]))
 elif sys.argv[1] == '--run':
 	import script
 	Challenge_problem = fetch_problem(sys.argv[2], list_of_problems)
-	print(Challenge_problem)
 	print(Challenge_problem.run_test(script.xcodescript))
 elif sys.argv[1] == '--submit':
 	import script
 	Challenge_problem = fetch_problem(sys.argv[2], list_of_problems)
-	print(Challenge_problem)
 	print(Challenge_problem.submit_test(script.xcodescript))
 
