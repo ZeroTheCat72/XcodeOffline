@@ -42,7 +42,7 @@ class Problem:
         print(f"Passed All {passed} Tests! You solved this Problem!!")
 
 new_problems = [
-	Problem('return sum', 'return the sum of 2 nums.', 'MICROSOFT', 'easy', [
+	Problem('return sum', 'return the sum of 2 nums.', 'Microsoft Interview Question 1', 'easy', [
 	[[1, 2], [3]]
 ], [])
 ]
