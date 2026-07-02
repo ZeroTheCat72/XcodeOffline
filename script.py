@@ -1,4 +1,4 @@
 import math
 
-def xcodescript(num1, num2):
+def scriptdsa(num1, num2):
 	return num1 + num2
