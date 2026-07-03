@@ -1,7 +1,7 @@
-# XcodeOffline
+# ScriptDSA
 
-## What is XcodeOffline?
-XcodeOffline is a script that allows you to practice Problem Solving without an Internet Connection, unlike websites like Leetcode or Codewars.
+## What is ScriptDSA?
+ScriptDSA is a script that allows you to practice Problem Solving without an Internet Connection, unlike websites like Leetcode or Codewars.
 The Main goal of this is to make it offline, as you don't have to hand over data to Leetcode or whatnot (even though I have an account on it... if this matures I can leave leetcode).  
 
 This Project is, and always will be, free and open source. If you paid for it, demand a refund!
@@ -25,12 +25,12 @@ This is just a project, but I hope it matures!
 
 Let me break it down for you:
 
-* Searching for a problem: If you wanted to, say, look for the Binary Search Algorithm, go: `python3 XcodeOffline.py --search query n diff`, where `n` is the number of results you'd prefer (default is 25),and `diff` being difficulty, if you're looking for a certain difficulty. Options include `easy`, `medium`, `hard`, and `extreme`. The result would be:
+* Searching for a problem: If you wanted to, say, look for the Binary Search Algorithm, go: `python3 scriptDSA.py --search query n diff`, where `n` is the number of results you'd prefer (default is 25),and `diff` being difficulty, if you're looking for a certain difficulty. Options include `easy`, `medium`, `hard`, and `extreme`. The result would be:
 
 `ID. problem name`
 This is the block that represents a found solution. Every problem has a unique ID, which is used to identify which problem you're solving when you run/submit the tests.
 
-* Running a test: run `script --run ID`, where --run is the name of the command (in this case, running), and ID is the identifier of the problem. This assumes that the file where you wrote your function is named script.py and the function's  name is `xcodescript`.
+* Running a test: run `script --run ID`, where --run is the name of the command (in this case, running), and ID is the identifier of the problem. This assumes that the file where you wrote your function is named script.py and the function's  name is `scriptdsa`.
 
 * Submitting a solution: same thing as running, `--submit` instead of `--run`.
 
@@ -40,7 +40,7 @@ This is the block that represents a found solution. Every problem has a unique I
 > This script only supports Python functions sadly. Maybe I'll add support for JS/TS, potentially other languages... Maybe.
 
 > [!TIP]
-> Instead of writing `python3 XcodeOffline.py` in your terminal, download/compile the executable for your OS and replace that long line with `XcodeOffline`. Convenient, Right?
+> Instead of writing `python3 scriptdsa.py` in your terminal, download/compile the executable for your OS and replace that long line with `XcodeOffline`. Convenient, Right?
 
 ## How to create Custom Problems?
 
